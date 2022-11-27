@@ -13,6 +13,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OnPushSampleComponent } from './on-push-sample/on-push-sample.component';
 import { Angular13NewFutureComponent } from './angular13-new-future/angular13-new-future.component';
+import { LoginComponent } from './account/login/login.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { Angular13NewFutureComponent } from './angular13-new-future/angular13-ne
     HomeComponent,
     PageNotFoundComponent,
     OnPushSampleComponent,
-    Angular13NewFutureComponent
+    Angular13NewFutureComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

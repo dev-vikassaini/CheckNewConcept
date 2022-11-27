@@ -1,16 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { IDeactivateComponent } from '../shared/services/deactivate-guard.guard';
 
 @Component({
   selector: 'app-reactive-form-sample',
   templateUrl: './reactive-form-sample.component.html',
   styleUrls: ['./reactive-form-sample.component.css']
 })
-export class ReactiveFormSampleComponent implements OnInit {
+export class ReactiveFormSampleComponent implements OnInit, IDeactivateComponent {
   contactForm!: FormGroup;
   contactFormUntyped!: FormGroup;
 
   constructor() { }
+  canExit(): boolean {
+    if (confirm("Do you wish to Please confirm")) {
+      return true
+    } else {
+      return false
+    }
+  }
 
   ngOnInit(): void {
     this.contactForm = new FormGroup({
