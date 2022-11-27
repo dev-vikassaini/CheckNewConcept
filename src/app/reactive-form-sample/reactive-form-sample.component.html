@@ -1,0 +1,50 @@
+<div class="w-3/4 m-auto text-center">
+    <h2 class="text-4xl">Angular 14,Typed Forms</h2>
+    <p>The most common request for an Angular feature on GitHub is for strictly typed forms, which, would improve the
+        framework’s model-driven approach to the process of dealing with forms.</p>
+
+    <div class="container pages text-justify pb-5">
+        <h1 class="mb-4">Angular 14 Typed Form</h1>
+        <section class="mb-4">
+            <div class="row">
+                <div class="col-md-9 mb-md-0 mb-5">
+                    <form [formGroup]="contactForm" (ngSubmit)="Submit()">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <input formControlName="name" type="text" class="form-control">
+                                    <label for="name" class="">Your name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <input formControlName="email" type="text" class="form-control">
+                                    <label for="email" class="">Your email</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="md-form mb-0">
+                                    <input formControlName="number" type="text" class="form-control">
+                                    <label for="subject" class="">Number</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="md-form">
+                                    <textarea formControlName="message" type="text" rows="2"
+                                        class="form-control md-textarea"></textarea>
+                                    <label for="message">Your message</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit"
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

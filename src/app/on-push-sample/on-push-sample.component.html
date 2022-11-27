@@ -1,0 +1,22 @@
+<div class="w-3/4 m-auto text-center">
+    <h2 class="text-4xl">Angular 14, Extended developer diagnostics (ng compilation) </h2>
+    <p>This feature from Angular v14 delivers an extendable framework that assists better insights into your templates
+        and offers suggestions for potential boosts. . It also checks the syntax error in our component like in contact
+        us component you remove the reactive
+
+        E.g. you type the wrong command like ng sevre then it will give suggestion for right commands</p>
+
+    <h2 class="text-4xl">Angular 14, NgModel OnPush </h2>
+    <p>
+        And finally, a community contribution by Artur Androsovych closes a top issue and ensures that NgModel changes
+        are reflected in the UI for OnPush components.
+
+        I have two components: the first one is a simple child component with some input and basic support of [ngModel]
+        directive via ControlValueAccesor interface. The second one is a parent component that has onPush change
+        detection strategy and populates a value into child component via [ngModel] directive (right after that it's
+        marked for changes via ChangeDetectorRef class). When [ngModel] is updated child component still displays an old
+        value in the template while the component object has actual value in target property.
+    </p>
+
+    <app-child [ngModel]='value'></app-child>
+</div>
